@@ -1,4 +1,26 @@
+  <!-- Connection page  -->
+  <section class="home-section home-style-2 connection-section pt-0 section-b-space">
+      <div class="container">
+          <h3 class="h3 text-center section-b-space">Get the tips you're looking for</h3>
+          <div class="row section-b-space">
 
+              <?php
+                $page = new Crud('blogs');
+                $blogs = $page->get();
+                foreach ($blogs as $value) :
+                ?>
+                  <div class="col-lg-4 col-md-5 col-sm-12 offset-lg-2">
+                      <div class="text-center mb-2">
+                          <img src="<?=storage($value['image'])?>" alt="set device" class="w-100" />
+                      </div>
+                      <h3><?=$value['heading']?></h3>
+                      <?=substr($value['content'],0,200).'...'?>
+                      <p><a href="blog-details.php?blog=<?=$value['slug']?>" class="abs">Learn more</a></p>
+                  </div>
+              <?php endforeach; ?>
+          </div>
+      </div>
+  </section>
   <!-- footer start -->
   <footer class="footer-sm-space">
       <div class="main-footer">

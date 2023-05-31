@@ -37,11 +37,9 @@ function storage($image)
 }
 function asset($file)
 {
-    $url  = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
-    $url .= $_SERVER['SERVER_NAME'];
-    $url .= htmlspecialchars($_SERVER['REQUEST_URI']);
-    $themeurl = dirname(dirname($url)) . '/admin/' . $file;
-    return $themeurl;
+    $url = new Database;
+    return $url->url. 'admin/' . $file;
+
 }
 function generateSeoURL($string, $wordLimit = 0)
 {

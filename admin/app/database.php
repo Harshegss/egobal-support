@@ -11,6 +11,7 @@ class Database
     
     private $db_host = 'localhost';
     public $url = "http://localhost/eglobal-support/";
+    // public $url = "https://thetestingserver.com/eglobal-support/";
     protected $conn;
 
     function __construct()
