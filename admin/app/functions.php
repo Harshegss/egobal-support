@@ -51,7 +51,6 @@ function generateSeoURL($string, $wordLimit = 0)
     }
 
     $quoteSeparator = preg_quote($separator, '#');
-
     $trans = array(
         '&.+?;'                 => $separator,
         '[^\w\d _-]'            => $separator,
