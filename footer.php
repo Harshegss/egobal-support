@@ -245,7 +245,7 @@
               </div>
           </div>
       </div> -->
-      <hr>
+
       <div class="sub-footer">
           <div class="container">
               <div class="row gy-3">
