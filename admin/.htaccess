@@ -1,0 +1,13 @@
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+    
+#     RewriteBase /eglobal-support/admin/
+#     RewriteRule ^page/([0-9a-zA-Z_-]+) parent.php?page=$1
+
+    # AuthType Basic
+    # AuthName "eglobal-support Administration"
+    # AuthUserFile /eglobal-support/admin/.htpasswd
+    # Require valid-user
+
+# </IfModule>
+
