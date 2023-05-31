@@ -1,13 +1,13 @@
 <?php
 class Database
 {
-    private $db_name = 'opps';
-    private $db_username = 'root';
-    private $db_password = '';
+    // private $db_name = 'opps';
+    // private $db_username = 'root';
+    // private $db_password = '';
 
-    // private $db_name = 'tstarghserver_egsssupport';
-    // private $db_username = 'tstarghserver_egsssupport';
-    // private $db_password = 'tstarghserver_egsssupport';
+    private $db_name = 'tstarghserver_egsssupport';
+    private $db_username = 'tstarghserver_egsssupport';
+    private $db_password = 'tstarghserver_egsssupport';
     
     private $db_host = 'localhost';
     public $url = "http://localhost/eglobal-support/";
