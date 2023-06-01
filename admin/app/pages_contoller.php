@@ -39,6 +39,9 @@ class Page
             $page = new Crud('hcip',"WHERE page = 'model_bottom'" ); $model_bottom = $page->get();
             $page = new Crud('issues', "INNER JOIN models ON models.id = issues.series_id LEFT JOIN single_issue ON issues.id = single_issue.issue_id"); $issues = $page->get('issues.id, issues.name, issues.image, models.name as modelname, single_issue.id as single_issue_id');
             $page = new Crud('models'); $models = $page->get();
+        }elseif($this->page == 'setting.php'){
+            $page = new Crud('setting', 'WHERE id = 1');
+            $setting = $page->get()[0];
         }
         include($this->page);
     }

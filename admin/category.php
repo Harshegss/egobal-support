@@ -21,20 +21,33 @@
   ?>
     <div class="col-12">
       <div class="card pt-4">
-        <div class="category-add-content">
+        <div class="category-add-content d-block">
           <h4 class="card-title"> Categories</h4>
-          <form class="row" action="app/category_controller.php" method="POST" enctype="multipart/form-data">
+          <form class="row mb-3" action="app/category_controller.php" method="POST" enctype="multipart/form-data">
           <div class="col <?=isset($_GET['edit']) ? '' : 'd-none'?>">
               <a href="parent.php?page=category" class="btn btn-sm btn-dark">Back To Add Category</a>
             </div>
             <div class="col">
+              <label for="" class="form-label">Category Name</label>
               <input type="text" class="form-control" placeholder="Category Name" name="name" value="<?=@$name['name']?>">
             </div>
-            <div class="col d-flex">
-              <!-- <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"> -->
+            <div class="col">
+            <label for="" class="form-label">Meta title</label>
+              <input type="text" class="form-control" placeholder="Meta title" name="meta_title" value="<?=@$name['meta_title']?>">
+            </div>
+            <div class="col">
+            <label for="" class="form-label">Meta keywords</label>
+              <input type="text" class="form-control" placeholder="Meta keywords" name="meta_keywords" value="<?=@$name['meta_keywords']?>">
+            </div>
+            <div class="col">
+            <label for="" class="form-label">Meta Description</label>
+              <input type="text" class="form-control" placeholder="Meta Description" name="meta_description" value="<?=@$name['meta_description']?>">
+            </div>
+            <div class="col">
+            <label for="" class="form-label">Image</label>
               <img src="<?=@$image?>" alt="" width="35" class="me-2 <?=isset($_GET['edit']) ? '' : 'd-none'?>"><input type="file" name="image[]" class="form-control form-control-sm py-2 px-3 " id="">
             </div>
-            <div class="col-3">
+            <div class="col">
               <button type="submit" class="btn btn-primary" value="<?=@$name['id']?>"  name="<?=isset($_GET['edit']) ? 'updateCategory' : 'addCategory'?>"><?=isset($_GET['edit']) ? 'Update Category' : 'Add Category'?></button>
             </div>
           </form>

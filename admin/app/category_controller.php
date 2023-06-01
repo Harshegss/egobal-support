@@ -5,6 +5,9 @@ if(isset($_POST['addCategory'])){
     $new->column['name'] = $_POST['name'];
     $new->column['image'] = storeImage($_FILES['image'],['svg']);
     $new->column['slug'] = generateSeoURL($_POST['name']);
+    $new->column['meta_title'] = $_POST['meta_title'];
+    $new->column['meta_keywords'] = $_POST['meta_keywords'];
+    $new->column['meta_description'] = $_POST['meta_description'];
     $new->save();
     redirect_back();
 }
@@ -16,6 +19,9 @@ if(isset($_POST['updateCategory'])){
         $update->column['image'] = storeImage($_FILES['image']);
     }
     $update->column['slug'] = generateSeoURL($_POST['name']);
+    $update->column['meta_title'] = $_POST['meta_title'];
+    $update->column['meta_keywords'] = $_POST['meta_keywords'];
+    $update->column['meta_description'] = $_POST['meta_description'];
     $update->update();
     redirect_back("&edit=$id");
 }
@@ -25,6 +31,9 @@ if(isset($_POST['addBrands'])){
     $new->column['image'] = storeImage($_FILES['image'],['svg']);
     $new->column['slug'] = generateSeoURL($_POST['name']);
     $new->column['categories'] = json_encode($_POST['categories']);
+    $new->column['meta_title'] = $_POST['meta_title'];
+    $new->column['meta_keywords'] = $_POST['meta_keywords'];
+    $new->column['meta_description'] = $_POST['meta_description'];
     $new->save();
     redirect_back();
 }
@@ -37,6 +46,9 @@ if(isset($_POST['updateBrands'])){
     }
     $update->column['slug'] = generateSeoURL($_POST['name']);
     $update->column['categories'] = json_encode($_POST['categories']);
+    $update->column['meta_title'] = $_POST['meta_title'];
+    $update->column['meta_keywords'] = $_POST['meta_keywords'];
+    $update->column['meta_description'] = $_POST['meta_description'];
     $update->update();
     redirect_back();
 }
@@ -57,6 +69,9 @@ if(isset($_POST['addModel'])){
     $new->column['name'] = $_POST['name'];
     $new->column['models'] = json_encode(explode(PHP_EOL, $_POST['models']));
     $new->column['brand_id'] = $_POST['brand'];
+    $new->column['meta_title'] = $_POST['meta_title'];
+    $new->column['meta_keywords'] = $_POST['meta_keywords'];
+    $new->column['meta_description'] = $_POST['meta_description'];
     $new->save();
     redirect_back();
 }
@@ -67,6 +82,9 @@ if(isset($_POST['updateModel'])){
     $update->column['slug'] = generateSeoURL($_POST['name']);
     $update->column['models'] = json_encode(explode(PHP_EOL, $_POST['models']));
     $update->column['brand_id'] = $_POST['brand'];
+    $update->column['meta_title'] = $_POST['meta_title'];
+    $update->column['meta_keywords'] = $_POST['meta_keywords'];
+    $update->column['meta_description'] = $_POST['meta_description'];
     $update->update();
     redirect_back("&edit=".$_POST['updateModel']);
 }

@@ -7,7 +7,7 @@
       <li class="breadcrumb-item active">Models</li>
     </ol>
   </nav>
-</div><!-- End Page Title -->
+</div>
 <section class="section">
   <div class="row">
     <div class="col-12">
@@ -46,7 +46,6 @@
               <?php endforeach; ?>
             </tbody>
           </table>
-          <!-- End Table with stripped rows -->
         </div>
       </div>
     </div>
@@ -94,6 +93,20 @@ Alienware x17
 Alienware x14">
 <?=isset($_GET['edit']) ? implode(PHP_EOL,json_decode($model['models'])) : '';?>
 </textarea>
+          </div>
+          <div class="form-feild mt-3">
+          <div class="col">
+            <label for="" class="form-label text-white">Meta title</label>
+              <input type="text" class="form-control" placeholder="Meta title" name="meta_title" value="<?=@$model['meta_title']?>">
+            </div>
+            <div class="col">
+            <label for="" class="form-label text-white">Meta keywords</label>
+              <input type="text" class="form-control" placeholder="Meta keywords" name="meta_keywords" value="<?=@$model['meta_keywords']?>">
+            </div>
+            <div class="col">
+            <label for="" class="form-label text-white">Meta Description</label>
+              <input type="text" class="form-control" placeholder="Meta Description" name="meta_description" value="<?=@$model['meta_description']?>">
+            </div>
           </div>
           <button type="submit" id="addModel" name="<?=isset($_GET['edit']) ? 'updateModel' : 'addModel';?>" value="<?=@$model['id']?>" class="d-none">Add Model</button>
         </form>

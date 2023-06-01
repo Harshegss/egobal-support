@@ -1,7 +1,14 @@
 
-    <?php include 'header.php';
-    
-    ?>
+<?php include "admin/app/vander.php"; ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Voxo : Support Services </title>
+    <meta name="keywords" content="Huawei">
+    <meta name="description" content="Huawei">
+    <?php include 'header.php';?>
     <!--end navigation bar-->  
 
     <!-- Breadcrumb section start -->

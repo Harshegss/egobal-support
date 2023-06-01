@@ -1,15 +1,22 @@
-<?php include 'header.php' ?>
-
-<section class="prdetails-section   trick-section section-b-space section-t-space" style="background: #fff;">
-    <div class="container p-0">
-        <?php
+<?php include "admin/app/vander.php"; 
         $models = $_GET['models'];
         $issue = $_GET['issue'];
 
         $detail = new Crud('single_issue', "WHERE issue_id = (SELECT id FROM issues WHERE slug = '$issue' AND series_id = (SELECT id FROM models WHERE slug = '$models'))");
         $detail = $detail->get()[0];
-
         ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><?=$detail['meta_title']?></title>
+    <meta name="keywords" content="<?=$detail['meta_keywords']?>">
+    <meta name="description" content="<?=$detail['meta_description']?>">
+<?php include 'header.php' ?>
+
+<section class="prdetails-section   trick-section section-b-space section-t-space" style="background: #fff;">
+    <div class="container p-0">
         <h3 class=""><?= $detail['heading'] ?></h3>
         <hr>
         <?= $detail['content'] ?>

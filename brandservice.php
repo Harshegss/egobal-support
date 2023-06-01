@@ -1,4 +1,16 @@
+<?php include "admin/app/vander.php"; ?>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<?php $slug = $_GET['models'];
+    $seo = new Crud('models', "WHERE slug = '$slug'");
+    $seo = $seo->get()[0];
+    ?>
+    <title><?=$seo['meta_title']?></title>
+    <meta name="keywords" content="<?=$seo['meta_keywords']?>">
+    <meta name="description" content="<?=$seo['meta_description']?>">
     <?php include 'header.php'?>
 
     <section class="home-section home-style-2 brand  pt-0 ">

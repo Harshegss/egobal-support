@@ -1,26 +1,4 @@
-  <!-- Connection page  -->
-  <section class="home-section home-style-2 connection-section pt-0 section-b-space">
-      <div class="container">
-          <h3 class="h3 text-center section-b-space">Get the tips you're looking for</h3>
-          <div class="row section-b-space">
 
-              <?php
-                $page = new Crud('blogs');
-                $blogs = $page->get();
-                foreach ($blogs as $value) :
-                ?>
-                  <div class="col-lg-4 col-md-5 col-sm-12 offset-lg-2">
-                      <div class="text-center mb-2">
-                          <img src="<?=storage($value['image'])?>" alt="set device" class="w-100" />
-                      </div>
-                      <h3><?=$value['heading']?></h3>
-                      <?=substr($value['content'],0,200).'...'?>
-                      <p><a href="blog-details.php?blog=<?=$value['slug']?>" class="abs">Learn more</a></p>
-                  </div>
-              <?php endforeach; ?>
-          </div>
-      </div>
-  </section>
   <!-- footer start -->
   <footer class="footer-sm-space">
       <div class="main-footer">
@@ -40,14 +18,14 @@
                               <li>
                                   <span>
                                       <b>phone:</b>
-                                      <span class="font-light"> + 185659635</span>
+                                      <span class="font-light"> <?=$setting['phone']?></span>
                                   </span>
 
                               </li>
                               <li>
                                   <span>
                                       <b>Email:</b>
-                                      <span class="font-light"> voxo123@gmail.com</span>
+                                      <span class="font-light"> <?=$setting['email']?></span>
                                   </span>
 
                               </li>
@@ -58,7 +36,7 @@
                           </ul>
                       </div>
                   </div>
-                  <div class="col-lg-2 col-md-4 col-sm-6">
+                  <!-- <div class="col-lg-2 col-md-4 col-sm-6">
                       <div class="footer-links">
                           <div class="footer-title">
                               <h3>PRODUCTS</h3>
@@ -182,7 +160,7 @@
                               </ul>
                           </div>
                       </div>
-                  </div>
+                  </div> -->
               </div>
           </div>
       </div>
@@ -252,7 +230,7 @@
                   <div class="col-md-4">
                       <p class="text-start font-dark">© 2022, Voxi Theme. Made with heart by EGSS</p>
                   </div>
-                  <div class="col-md-4">
+                  <!-- <div class="col-md-4">
                       <ul>
                           <li>
                               <a href="javascript:void(0)" class="font-dark">
@@ -285,7 +263,7 @@
                               </li>
                           </ul>
                       </a>
-                  </div>
+                  </div> -->
               </div>
           </div>
       </div>

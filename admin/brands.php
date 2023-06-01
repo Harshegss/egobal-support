@@ -14,7 +14,7 @@
 
     <div class="col-12">
       <div class="card pt-4">
-        <div class="category-add-content">
+        <div class="category-add-content d-block">
           <h4 class="card-title"> Brands</h4>
           <?php
           if (isset($_GET['edit'])) {
@@ -29,14 +29,28 @@
               <a href="parent.php?page=brands" class="btn btn-sm btn-dark">Back To Add Category</a>
             </div>
             <div class="col">
+            <label for="" class="form-label">Brand Name</label>
               <input type="text" class="form-control form-control" placeholder="Brand Name" name="name" value="<?= @$edit['name'] ?>">
             </div>
-            <div class="col d-flex">
+            <div class="col">
+            <label for="" class="form-label">Meta title</label>
+              <input type="text" class="form-control" placeholder="Meta title" name="meta_title" value="<?=@$edit['meta_title']?>">
+            </div>
+            <div class="col">
+            <label for="" class="form-label">Meta keywords</label>
+              <input type="text" class="form-control" placeholder="Meta keywords" name="meta_keywords" value="<?=@$edit['meta_keywords']?>">
+            </div>
+            <div class="col">
+            <label for="" class="form-label">Meta Description</label>
+              <input type="text" class="form-control" placeholder="Meta Description" name="meta_description" value="<?=@$edit['meta_description']?>">
+            </div>
+            <div class="col">
+            <label for="" class="form-label">Brand Image</label>
               <img src="<?= @$image ?>" alt="" width="35" class="me-2 <?= isset($_GET['edit']) ? '' : 'd-none' ?>">
-              <!-- <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"> -->
               <input type="file" name="image[]" class="form-control form-control-sm py-2 px-3 " id="">
             </div>
-            <div class="col-4">
+            <div class="col">
+            <label for="" class="form-label">Select  Category</label>
               <select class="js-example-basic-multiple form-control w-100" name="categories[]" multiple="multiple">
                 <?php foreach ($category as $key => $value) : ?>
                   <?php if (isset($_GET['edit']) ? in_array($category[$key]['id'], json_decode($edit['categories'])) : 1 === '2') : ?>

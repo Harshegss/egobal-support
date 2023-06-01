@@ -1,3 +1,19 @@
+<?php include "admin/app/vander.php"; 
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php
+    $slug = $_GET['category'];
+    $seo = new Crud('category', "WHERE slug = '$slug'");
+    $seo = $seo->get()[0];
+    ?>
+    <title><?=$seo['meta_title']?></title>
+    <meta name="keywords" content="<?=$seo['meta_keywords']?>">
+    <meta name="description" content="<?=$seo['meta_description']?>">
 <?php include 'header.php' ?>
 <!--end navigation bar-->
 
@@ -34,7 +50,6 @@
             <div class="col-xxl-10 col-lg-8 mx-auto">
                 <div class="category-wrapper brandlist white-arrow category-arrow">
                     <?php
-                    $slug = $_GET['category'];
                     $brnd = new Crud('category', "WHERE slug = '$slug'");
                     $where = '%"' . $brnd->get('id')[0]['id'] . '"%';
 

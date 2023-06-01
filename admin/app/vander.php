@@ -29,7 +29,6 @@ class Crud
     }
     public function save()
     {
-
         $col = "";
         $value = "";
         foreach ($this->column as $key => $val) {
@@ -105,3 +104,6 @@ class Crud
         $this->db->close();
     }
 }
+
+$setting = new Crud('setting', "WHERE id = 1");
+$setting = $setting->get()[0];

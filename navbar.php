@@ -8,10 +8,7 @@
                          <div class="menu-left">
                              <div class="brand-logo">
                                  <a href="index.php">
-                                     <svg class="svg-icon">
-                                         <use class="fill-color" xlink:href="assets/svg/icons.svg#logo"></use>
-                                     </svg>
-                                     <img src="assets/images/logo.png" class="img-fluid blur-up lazyloaded" alt="logo">
+                                     <img src="<?=storage($setting['logo'])?>" class="img-fluid blur-up lazyloaded" style="width:300px" alt="logo">
                                  </a>
                              </div>
                          </div>

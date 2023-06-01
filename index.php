@@ -1,10 +1,17 @@
+<?php include "admin/app/vander.php"; ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><?=$setting['meta_title']?></title>
+    <meta name="keywords" content="<?=$setting['meta_keywords']?>">
+    <meta name="description" content="<?=$setting['meta_description']?>">
 <?php include 'header.php';
 
 $page = new Crud('hcip', "WHERE page = 'index' ORDER BY id DESC");
 $index = $page->get()[0];
 ?>
-<!--end navigation bar-->
-
 <!-- home slider start -->
 <section class="home-section home-style-2  pt-0 section-b-space">
     <div class="container-fluid p-0">

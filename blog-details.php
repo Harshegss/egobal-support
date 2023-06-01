@@ -6,7 +6,7 @@
     if($blogs == false){
         echo '<script>window.location="blog.php"</script>';
     }
-    ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

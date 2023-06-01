@@ -23,7 +23,6 @@
     <?php include("header.php"); ?>
     <?php include("side-bar.php"); ?>
     <main id="main" class="main">
-
         <?php
         if (isset($_GET['page'])) {
             $page = $_GET['page'] . '.php';
