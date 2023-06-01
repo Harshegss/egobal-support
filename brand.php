@@ -58,7 +58,7 @@
                     ?>
                         <div>
                             <a href="brand-models.php?category=<?= $slug ?>&brand=<?= $value['slug'] ?>" class="category-padding">
-                                <img src="assets/images/icon/phones-icon.svg" class=" " alt="category image" />
+                                <img src="<?=storage($value['slug'])?>" class=" " alt="category image" />
                                 <div class="category-content category-text-1">
                                     <h4 class="text-primary text-center"><?= $value['name'] ?></h4>
                                 </div>
