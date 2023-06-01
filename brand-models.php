@@ -20,7 +20,7 @@
                 <div class="home-slider3">
                     <div class="home-wrap row m-0">
                         <div class="col-xxl-12 col-lg-12 p-0 left-content">
-                            <img src="<?=asset('assets/images/brand/kv-pad.png')?>" class="bg-img blur-up" alt="" />
+                            <img src="<?=asset('assets/images/kv-pad.jpg')?>" class="bg-img blur-up" alt="" />
                             <!-- " class="lazyload" -->
                             <div class="home-content row">
                                 <div class="col-xxl-5 col-lg-7 col-md-12 col-sm-6 col-10 offset-lg-2 mx-auto ">
