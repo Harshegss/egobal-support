@@ -8,10 +8,7 @@
                       <div class="footer-contact">
                           <div class="brand-logo mb-5">
                               <a href="index.php">
-                                  <svg class="svg-icon">
-                                      <use class="fill-color" xlink:href="assets/svg/icons.svg#logo"></use>
-                                  </svg>
-                                  <img src="assets/images/logo.png" class="img-fluid blur-up lazyloaded" alt="logo">
+                                  <img src="<?=storage($setting['logo'])?>" class="img-fluid blur-up lazyloaded" alt="logo" style="width:300px">
                               </a>
                           </div>
                           <ul class="contact-lists">
