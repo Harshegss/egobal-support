@@ -20,7 +20,7 @@
                     <div class="home-slider3 ">
                         <div class="home-wrap row m-0">
                             <div class="col-xxl-12 col-lg-12 p-0 left-content">
-                                <img src="<?=asset('assets/images/kv-pad.jpg')?>" class="bg-img blur-up " alt=""><!-- " class="lazyload" -->
+                                <img src="<?=storage('kv-pad.jpg')?>" class="bg-img blur-up " alt=""><!-- " class="lazyload" -->
                                 <div class="home-content row">
                                     <div class="col-xxl-5 col-lg-7 col-md-12 col-sm-6 col-12 offset-lg-2 ">
                                         <h1 class="h1 text-left text-white">Welcome to Phone </h1>
