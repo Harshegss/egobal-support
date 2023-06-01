@@ -37,6 +37,9 @@
                                          <?php
                                             endforeach;
                                             ?>
+                                            <li class="mega-menu dropdown home-menu">
+                                                 <a href="blog.php" class="nav-link menu-title">Blogs</a>
+                                             </li>
                                      </ul>
                                  </div>
                              </div>

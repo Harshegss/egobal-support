@@ -5,23 +5,11 @@
 <html lang="en">
 
 <head>
-    <title>Voxo : Support Services </title>
-    <meta name="keywords" content="Huawei">
-    <meta name="description" content="Huawei">
+    <title>Blogs</title>
     <?php include 'header.php';?>
     <!--end navigation bar-->  
 
     <!-- Breadcrumb section start -->
-    <section class="breadcrumb-section py-2 ">
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="h2 text-start">News & Events</h1>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Breadcrumb section end -->
 
     <!-- Blog Section Start -->
@@ -47,9 +35,11 @@
                                         <h2 class="card-title"><?=$value['heading']?>
                                         </h2>
                                     </a>
+                                    <?=substr($value['content'],0,200).'...'?><br>
+                                    <br>
                                     <div class="blog-profile">
                                         <div class="image-name">
-                                            <h6><a href="">Read blog</a></h6>
+                                            <h6><a href="">Read blog -></a></h6>
                                         </div>
                                     </div>
                                 </div>
