@@ -58,7 +58,7 @@
        <li class="nav-item">
         <a class="nav-link collapsed" href="parent.php?page=setting">
           <i class="bi bi-grid"></i>
-          <span>Setting</span>
+          <span>Settings</span>
         </a>
       </li>
       <!-- 
