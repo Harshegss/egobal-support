@@ -3,7 +3,7 @@
    <nav>
       <ol class="breadcrumb">
          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-         <li class="breadcrumb-item active">Setting</li>
+         <li class="breadcrumb-item active">Settings</li>
          <!--<li class="breadcrumb-item active">Category</li>-->
       </ol>
    </nav>
@@ -14,7 +14,7 @@
          <div class="card">
             <div id="Gallery-Body" class="card-body">
                <div id="uploadedImages1">
-                  <h4 class="card-title">Setting</h4>
+                  <h4 class="card-title">Settings</h4>
                   <div class="setting-form">
                      <!--<input type="file" class="form-control mb-3" id="file" name="file" multiple="">-->
                      <form class="row " action="app/setting-controller.php" method="POST" enctype="multipart/form-data">
