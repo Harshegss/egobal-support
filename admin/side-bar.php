@@ -49,12 +49,12 @@
        </ul>
      </li>
 
-     <li class="nav-item">
+     <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="parent.php?page=seo-page">
           <i class="bi bi-grid"></i>
           <span>SEO</span>
         </a>
-      </li>
+      </li> -->
        <li class="nav-item">
         <a class="nav-link collapsed" href="parent.php?page=setting">
           <i class="bi bi-grid"></i>
