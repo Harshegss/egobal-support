@@ -171,7 +171,7 @@
     <form action="app/single_issue_controller.php" method="POST" enctype="multipart/form-data">
       <div class="form-feild">
         <label class="text-white">Heading</label>
-        <input type="text" class="form-control mt-2 fs-3" name="heading" value="">
+        <input type="text" class="form-control mt-2 fs-3" name="heading" value="" required>
       </div>
       <div class="form-feild mt-3">
         <label class="text-white">Content</label>
@@ -180,13 +180,13 @@
       <div class="form-feild mt-3">
         <div class="row bg-light py-3 rounded mb-3 appendedItem">
           <div class="col">
-            <input type="text" name="sec_heading[]" class="form-control" placeholder="Heading" aria-label="First name">
+            <input type="text" name="sec_heading[]" class="form-control" placeholder="Heading" aria-label="First name" required>
           </div>
           <div class="col-5">
-            <input type="file" name="sec_image[]" class="form-control form-control-sm py-2">
+            <input type="file" name="sec_image[]" class="form-control form-control-sm py-2" required>
           </div>
           <div class="col-12 ">
-            <textarea class="form-control" name="sec_content[]" rows="5"></textarea>
+            <textarea class="form-control" name="sec_content[]" rows="5" required></textarea>
           </div>
         </div>
         <div id="dynamicSection">
@@ -198,15 +198,15 @@
       </div>
       <div class="form-feild mt-3">
         <label class="text-white">Meta Title</label>
-        <input type="text" class="form-control mt-2" name="meta_title" value="">
+        <input type="text" class="form-control mt-2" name="meta_title" value="" required>
       </div>
       <div class="form-feild mt-3">
         <label class="text-white">Meta Description</label>
-        <textarea class="form-control mt-2" rows="2" name="meta_description"></textarea>
+        <textarea class="form-control mt-2" rows="2" name="meta_description" required></textarea>
       </div>
       <div class="form-feild mt-3">
         <label class="text-white">Meta Keywords</label>
-        <input type="text" class="form-control mt-2" name="meta_keyword" value="" placeholder="Hello, Hii, Bye, Byee">
+        <input type="text" class="form-control mt-2" name="meta_keyword" value="" placeholder="Hello, Hii, Bye, Byee" required>
       </div>
       <button type="submit" id="addSingleIssue" name="addSingleIssue" value="" class="d-none">Add Single Issue</button>
     </form>

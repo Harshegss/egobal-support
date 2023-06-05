@@ -71,11 +71,11 @@ if(isset($_GET['edit'])){
         <form action="app/category_controller.php" method="POST" enctype="multipart/form-data">
           <div class="form-feild">
             <label class="text-white">Series</label>
-            <input type="text" class="form-control mt-2" name="name" placeholder="Alienware Series" value="<?=@$model['name']?>">
+            <input type="text" class="form-control mt-2" name="name" placeholder="Alienware Series" value="<?=@$model['name']?>" required>
           </div>
           <div class="form-feild mt-3">
             <label class="text-white">Select Brand</label>
-            <select class="form-control" name="brand">
+            <select class="form-control" name="brand" required>
             <option value="" disabled selected>Select Brand</option>
               <?php foreach ($brands as $value) : ?>
                 <option value="<?= $value['id'] ?>" <?=isset($_GET['edit']) ? ($value['id'] == $model['brand_id'] ? 'selected' : '') : '';?>><?= $value['name'] ?></option>
@@ -84,7 +84,7 @@ if(isset($_GET['edit'])){
           </div>
           <div class="form-feild mt-3">
             <label class="text-white">Models</label>
-            <textarea name="models" class="form-control" id="" cols="30" rows="10" placeholder="Alienware m15 R7 
+            <textarea required name="models" class="form-control" id="" cols="30" rows="10" placeholder="Alienware m15 R7 
 Alienware m17 R5
 Alienware x17 R2
 Alienware x15
@@ -97,15 +97,15 @@ Alienware x14">
           <div class="form-feild mt-3">
           <div class="col">
             <label for="" class="form-label text-white">Meta title</label>
-              <input type="text" class="form-control" placeholder="Meta title" name="meta_title" value="<?=@$model['meta_title']?>">
+              <input type="text" class="form-control" placeholder="Meta title" name="meta_title" value="<?=@$model['meta_title']?>" required>
             </div>
             <div class="col">
             <label for="" class="form-label text-white">Meta keywords</label>
-              <input type="text" class="form-control" placeholder="Meta keywords" name="meta_keywords" value="<?=@$model['meta_keywords']?>">
+              <input type="text" class="form-control" placeholder="Meta keywords" name="meta_keywords" value="<?=@$model['meta_keywords']?>" required>
             </div>
             <div class="col">
             <label for="" class="form-label text-white">Meta Description</label>
-              <input type="text" class="form-control" placeholder="Meta Description" name="meta_description" value="<?=@$model['meta_description']?>">
+              <input type="text" class="form-control" placeholder="Meta Description" name="meta_description" value="<?=@$model['meta_description']?>" required>
             </div>
           </div>
           <button type="submit" id="addModel" name="<?=isset($_GET['edit']) ? 'updateModel' : 'addModel';?>" value="<?=@$model['id']?>" class="d-none">Add Model</button>

@@ -29,23 +29,23 @@
             </div>
             <div class="col">
               <label for="" class="form-label">Category Name</label>
-              <input type="text" class="form-control" placeholder="Category Name" name="name" value="<?=@$name['name']?>">
+              <input type="text" class="form-control" placeholder="Category Name" name="name" value="<?=@$name['name']?>" required>
             </div>
             <div class="col">
             <label for="" class="form-label">Meta title</label>
-              <input type="text" class="form-control" placeholder="Meta title" name="meta_title" value="<?=@$name['meta_title']?>">
+              <input type="text" class="form-control" placeholder="Meta title" name="meta_title" value="<?=@$name['meta_title']?>" required>
             </div>
             <div class="col">
             <label for="" class="form-label">Meta keywords</label>
-              <input type="text" class="form-control" placeholder="Meta keywords" name="meta_keywords" value="<?=@$name['meta_keywords']?>">
+              <input type="text" class="form-control" placeholder="Meta keywords" name="meta_keywords" value="<?=@$name['meta_keywords']?>" required>
             </div>
             <div class="col">
             <label for="" class="form-label">Meta Description</label>
-              <input type="text" class="form-control" placeholder="Meta Description" name="meta_description" value="<?=@$name['meta_description']?>">
+              <input type="text" class="form-control" placeholder="Meta Description" name="meta_description" value="<?=@$name['meta_description']?>" required>
             </div>
             <div class="col">
             <label for="" class="form-label">Image</label>
-              <img src="<?=@$image?>" alt="" width="35" class="me-2 <?=isset($_GET['edit']) ? '' : 'd-none'?>"><input type="file" name="image[]" class="form-control form-control-sm py-2 px-3 " id="">
+              <img src="<?=@$image?>" alt="" width="35" class="me-2 <?=isset($_GET['edit']) ? '' : 'd-none'?>"><input type="file" name="image[]" class="form-control form-control-sm py-2 px-3 " id="" required>
             </div>
             <div class="col">
               <button type="submit" class="btn btn-primary" value="<?=@$name['id']?>"  name="<?=isset($_GET['edit']) ? 'updateCategory' : 'addCategory'?>"><?=isset($_GET['edit']) ? 'Update Category' : 'Add Category'?></button>

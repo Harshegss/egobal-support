@@ -30,24 +30,24 @@
             </div>
             <div class="col">
             <label for="" class="form-label">Brand Name</label>
-              <input type="text" class="form-control form-control" placeholder="Brand Name" name="name" value="<?= @$edit['name'] ?>">
+              <input type="text" class="form-control form-control" placeholder="Brand Name" name="name" value="<?= @$edit['name'] ?>" required>
             </div>
             <div class="col">
             <label for="" class="form-label">Meta title</label>
-              <input type="text" class="form-control" placeholder="Meta title" name="meta_title" value="<?=@$edit['meta_title']?>">
+              <input type="text" class="form-control" placeholder="Meta title" name="meta_title" value="<?=@$edit['meta_title']?>" required>
             </div>
             <div class="col">
             <label for="" class="form-label">Meta keywords</label>
-              <input type="text" class="form-control" placeholder="Meta keywords" name="meta_keywords" value="<?=@$edit['meta_keywords']?>">
+              <input type="text" class="form-control" placeholder="Meta keywords" name="meta_keywords" value="<?=@$edit['meta_keywords']?>" required>
             </div>
             <div class="col">
             <label for="" class="form-label">Meta Description</label>
-              <input type="text" class="form-control" placeholder="Meta Description" name="meta_description" value="<?=@$edit['meta_description']?>">
+              <input type="text" class="form-control" placeholder="Meta Description" name="meta_description" value="<?=@$edit['meta_description']?>" required>
             </div>
             <div class="col">
             <label for="" class="form-label">Brand Image</label>
               <img src="<?= @$image ?>" alt="" width="35" class="me-2 <?= isset($_GET['edit']) ? '' : 'd-none' ?>">
-              <input type="file" name="image[]" class="form-control form-control-sm py-2 px-3 " id="">
+              <input type="file" name="image[]" class="form-control form-control-sm py-2 px-3 " id="" required>
             </div>
             <div class="col">
             <label for="" class="form-label">Select  Category</label>

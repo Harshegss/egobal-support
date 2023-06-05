@@ -3,7 +3,7 @@ require_once 'vander.php';
 if(isset($_POST['addCategory'])){
     $new = new Crud('category');
     $new->column['name'] = $_POST['name'];
-    $new->column['image'] = storeImage($_FILES['image'],['svg']);
+    $new->column['image'] = storeImage($_FILES['image'],['svg','webp']);
     $new->column['slug'] = generateSeoURL($_POST['name']);
     $new->column['meta_title'] = $_POST['meta_title'];
     $new->column['meta_keywords'] = $_POST['meta_keywords'];
