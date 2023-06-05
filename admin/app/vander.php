@@ -42,6 +42,8 @@ class Crud
         }
         $table = $this->table;
         $sql = "INSERT INTO $table ($col) VALUES($value)";
+        echo $sql;
+        die;
         $result = $this->db->query($sql);
         return $result;
     }

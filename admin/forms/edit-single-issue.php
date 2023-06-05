@@ -14,7 +14,7 @@ $get = $get->get()[0];
     <form action="app/single_issue_controller.php" method="POST" enctype="multipart/form-data">
       <div class="form-feild">
         <label class="text-white">Heading</label>
-        <input type="text" class="form-control mt-2 fs-3" name="heading" value="<?= $get['heading'] ?>" required>
+        <input type="text" class="form-control mt-2 fs-3" name="heading" value="<?= $get['heading'] ?>" >
       </div>
       <div class="form-feild mt-3">
         <label class="text-white">Content</label>
