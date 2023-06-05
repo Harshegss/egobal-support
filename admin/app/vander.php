@@ -27,29 +27,23 @@ class Crud
             $this->db_columns[$items['Field']] = $items['Type'];
         }
     }
+
     public function save()
     {
         $col = "";
         $value = "";
-        print_r($this->column);
-        echo '<br>';
-        echo '<br>';
         foreach ($this->column as $key => $val) {
             if (end($this->column) != $val) {
                 $col .= "`{$key}`,";
                 $value .= stristr($this->db_columns[$key], 'int') != '' ? $this->db->real_escape_string($val) . ',' : "'{$this->db->real_escape_string($val)}',";
-                echo $value.'<br>';
             } else {
                 $col .= "`{$key}`";
                 
                 $value .= stristr($this->db_columns[$key], 'int') != '' ? $this->db->real_escape_string($val) : "'{$this->db->real_escape_string($val)}'";
-                echo $value.'<br>';
             }
         }
         $table = $this->table;
         $sql = "INSERT INTO $table ($col) VALUES($value)";
-        echo $sql;
-        die;
         $result = $this->db->query($sql);
         return $result;
     }
