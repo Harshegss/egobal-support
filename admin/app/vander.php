@@ -35,9 +35,12 @@ class Crud
             if (end($this->column) != $val) {
                 $col .= "`{$key}`,";
                 $value .= stristr($this->db_columns[$key], 'int') != '' ? $this->db->real_escape_string($val) . ',' : "'{$this->db->real_escape_string($val)}',";
+                echo $value.'br';
             } else {
                 $col .= "`{$key}`";
+                
                 $value .= stristr($this->db_columns[$key], 'int') != '' ? $this->db->real_escape_string($val) : "'{$this->db->real_escape_string($val)}'";
+                echo $value.'br';
             }
         }
         $table = $this->table;
