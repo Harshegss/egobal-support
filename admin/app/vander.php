@@ -31,6 +31,9 @@ class Crud
     {
         $col = "";
         $value = "";
+        print_r($this->column);
+        echo '<br>';
+        echo '<br>';
         foreach ($this->column as $key => $val) {
             if (end($this->column) != $val) {
                 $col .= "`{$key}`,";
