@@ -107,3 +107,5 @@ class Crud
 
 $setting = new Crud('setting', "WHERE id = 1");
 $setting = $setting->get()[0];
+
+ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
