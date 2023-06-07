@@ -67,7 +67,7 @@ $index = $page->get()[0];
                     ?>
                         <div>
                             <a href="brand.php?category=<?= $value['slug'] ?>" class=" category-padding ">
-                                <img src="<?= storage($value['image']) ?>" class=" " alt="category image">
+                                <img src="<?=storage($value['image']) ?>" class=" " alt="category image">
                                 <div class="category-content category-text-1 ">
                                     <h4 class="text-dark text-center"><?= $value['name'] ?></h4>
                                 </div>
@@ -97,7 +97,7 @@ $index = $page->get()[0];
                     <div class="home-slider">
                         <div class="home-wrap row m-0">
                             <div class="col-xxl-12 col-lg-12 p-0 left-content">
-                                <img src="assets/images/slider/slider.png" class="bg-img blur-up " alt=""><!-- " class="lazyload" -->
+                                <img src="<?=storage($slide['image'])?>" class="bg-img blur-up " alt="">
                                 <div class="home-content row">
                                     <div class="col-xxl-8 col-lg-8 col-md-12 col-sm-6 col-12 ">
                                         <h2 data-animation-in="fadeInUp"><?= $slide['heading'] ?></h2>
